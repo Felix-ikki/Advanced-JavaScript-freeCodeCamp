@@ -1,0 +1,30 @@
+function palindrome(str) {
+  let arr = [];
+  let count = 0;
+  let letter = 1;
+  
+  let word = str
+  .toLowerCase()
+  .replace(/[^0-9a-z]/gi, '');
+
+console.log(word);
+
+  for (let j = 0; j < word.length / 2; j++)
+  {
+    console.log(j)
+      if (word[j] === word[word.length - letter])
+      {
+        count++;
+        letter++;
+      }
+      else 
+      {
+        return false;
+      }
+  }
+
+  return true
+
+}
+
+palindrome("A man, a plan, a canal. Panama");
